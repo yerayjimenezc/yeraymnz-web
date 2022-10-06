@@ -161,6 +161,9 @@
                   href="https://www.linkedin.com/in/yeray-jimenez/">
                   Yeray Jiménez</v-btn>
               </v-row>
+              <v-row class="w-100 mt-5 d-flex justify-center">
+                <p class="mt-5 font-weight-thin">Diseñado & construido por <strong>Yeray jiménez.</strong></p>
+              </v-row>
             </v-col>
           </v-row>
         </v-row>
