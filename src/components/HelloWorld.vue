@@ -25,7 +25,7 @@
             </v-btn>
           </v-col>
           <v-col class="d-flex flex-column align-center" cols="12" md="6">
-            <img id="avatar" width="400" src="../assets/Avatar portfolio web.png" alt="Avatar">
+            <img id="avatar" width="400" src="../assets/avatar-yeray.png" alt="Avatar">
           </v-col>
           <v-col class="d-flex flex-column align-center justify-center" v-if="$vuetify.display.mobile" cols="12" md="6">
             <p>Hola, soy</p>
