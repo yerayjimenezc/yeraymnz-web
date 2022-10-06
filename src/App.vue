@@ -15,7 +15,7 @@
           <v-list class="d-flex" density="compact" nav>
             <v-list-item prepend-icon="mdi-alpha-i" title="Sobre mí" href="#sobre-mi"></v-list-item>
             <v-list-item prepend-icon="mdi-alpha-v" title="Proyectos" href="#proyectos"></v-list-item>
-            <v-list-item prepend-icon="mdi-alpha-x" title="Contacto" value="#"></v-list-item>
+            <v-list-item prepend-icon="mdi-alpha-x" title="Contacto" href="#contacto"></v-list-item>
           </v-list>
         </v-col>
       </v-app-bar>
@@ -23,7 +23,7 @@
         <v-list density="compact" nav>
           <v-list-item prepend-icon="mdi-alpha-i" title="Sobre mí" href="#sobre-mi"></v-list-item>
           <v-list-item prepend-icon="mdi-alpha-v" title="Proyectos" href="#proyectos"></v-list-item>
-          <v-list-item prepend-icon="mdi-alpha-x" title="Contacto" value="#"></v-list-item>
+          <v-list-item prepend-icon="mdi-alpha-x" title="Contacto" href="#contacto"></v-list-item>
         </v-list>
       </v-navigation-drawer>
       <v-main class="d-flex justify-center">

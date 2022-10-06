@@ -16,7 +16,7 @@
       </v-col>
       <v-col>
         <v-row>
-          <v-col class="d-flex flex-column justify-center" v-if="!$vuetify.display.mobile" cols="12" md="6">
+          <v-col class="d-flex flex-column justify-center pa-5" v-if="!$vuetify.display.mobile" cols="12" md="6">
             <p class="font-weight-thin">Hola, soy</p>
             <h1>Yeray Jiménez</h1>
             <h3>🚀Construyo cosas para web.</h3>
