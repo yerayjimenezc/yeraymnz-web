@@ -14,7 +14,7 @@
         <v-col v-if="!$vuetify.display.mobile">
           <v-list class="d-flex" density="compact" nav>
             <v-list-item prepend-icon="mdi-alpha-i" title="Sobre mí" href="#sobre-mi"></v-list-item>
-            <v-list-item prepend-icon="mdi-alpha-v" title="Proyectos" value="#"></v-list-item>
+            <v-list-item prepend-icon="mdi-alpha-v" title="Proyectos" href="#proyectos"></v-list-item>
             <v-list-item prepend-icon="mdi-alpha-x" title="Contacto" value="#"></v-list-item>
           </v-list>
         </v-col>
@@ -22,12 +22,14 @@
       <v-navigation-drawer color="grey-darken-2" v-model="drawer" temporary>
         <v-list density="compact" nav>
           <v-list-item prepend-icon="mdi-alpha-i" title="Sobre mí" href="#sobre-mi"></v-list-item>
-          <v-list-item prepend-icon="mdi-alpha-v" title="Proyectos" value="#"></v-list-item>
+          <v-list-item prepend-icon="mdi-alpha-v" title="Proyectos" href="#proyectos"></v-list-item>
           <v-list-item prepend-icon="mdi-alpha-x" title="Contacto" value="#"></v-list-item>
         </v-list>
       </v-navigation-drawer>
-      <v-main>
-        <HelloWorld />
+      <v-main class="d-flex justify-center">
+        <v-col cols="12" md="9">
+          <HelloWorld />
+        </v-col>
       </v-main>
     </v-layout>
   </v-app>

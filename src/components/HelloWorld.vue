@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col class="d-flex flex-column justify-center" v-if="!$vuetify.display.mobile" cols="12" sm="6">
+      <v-col class="d-flex flex-column justify-center" v-if="!$vuetify.display.mobile" cols="12" md="6">
         <p>Hola, soy</p>
         <h1>Yeray Jiménez</h1>
         <h3>🚀Construyo cosas para web.</h3>
@@ -9,10 +9,10 @@
           Ver Proyectos!
         </v-btn>
       </v-col>
-      <v-col class="d-flex flex-column align-center" cols="12" sm="6">
+      <v-col class="d-flex flex-column align-center" cols="12" md="6">
         <img id="avatar" width="400" src="../assets/Avatar portfolio web.png" alt="Avatar">
       </v-col>
-      <v-col class="d-flex flex-column align-center justify-center" v-if="$vuetify.display.mobile" cols="12" sm="6">
+      <v-col class="d-flex flex-column align-center justify-center" v-if="$vuetify.display.mobile" cols="12" md="6">
         <p>Hola, soy</p>
         <h1>Yeray Jiménez</h1>
         <h3>🚀Construyo cosas para web.</h3>
@@ -29,22 +29,23 @@
         </h4>
       </v-row>
       <v-row class="my-5 mx-2">
-        <v-col class="d-flex flex-column justify-center font-weight-thin" cols="12" sm="6">
-          <p>Hola soy Yeray Jiménez, estudie una Ingenieria en Diseño Industrial, pero mi pasión es el desarrollo web.
+        <v-col id="text-me" class="d-flex flex-column justify-center font-weight-thin" cols="12" md="6">
+          <p class="">Hola soy Yeray Jiménez, estudie una Ingenieria en Diseño Industrial, pero mi pasión es el
+            desarrollo web.
           </p>
-          <p>Mi interés en el desarrollo web comenzó en 2020 cuando decidí realizar una serie de cursos centrados en la
-            base de la web HTML & CSS, En 2021 decidi redireccionar mi carrera profesional hacia el sector de la
-            programación y realize una especialización en FullStack (Angular) para poder entender todas las partes que
-            componen una web. Recientemente he finalizado otro curso en especialización FrontEnd estableciendo base
-            solidas de Javascript Vanilla y manejo del DOM, para posteriormente consolidar conocimientos con VUE, Nuxt y
-            Vuetify. Actualmente estoy aumentando mis conocimientos a traves de proyectos.
+          <p class="pt-5">Mi interés en el desarrollo web comenzó en 2020 cuando decidí realizar una serie de cursos
+            centrados en la base de la web HTML & CSS, En 2021 decidi redireccionar mi carrera profesional hacia el
+            sector de la programación y realize una especialización en FullStack (Angular) para poder entender todas las
+            partes que componen una web. Recientemente he finalizado otro curso en especialización FrontEnd
+            estableciendo base solida de Javascript Vanilla y manejo del DOM, para posteriormente consolidar
+            conocimientos con VUE, Nuxt y Vuetify. Actualmente estoy aumentando mis conocimientos a traves de proyectos.
           </p>
-          <p>Aquí hay algunas tecnologías con las que he estado trabajando recientemente:</p>
+          <p class="pt-5">Aquí hay algunas tecnologías con las que he estado trabajando recientemente:</p>
           <v-col class="px-0">
             <v-chip class="ma-1" v-for="i in tech" variant='outlined' color="primary">{{i}}</v-chip>
           </v-col>
         </v-col>
-        <v-col class="d-flex flex-column align-center" cols="12" sm="6">
+        <v-col class="d-flex flex-column align-center" cols="12" md="6">
           <v-card class="w-100">
             <v-card-title>Educación</v-card-title>
             <v-expansion-panels>
@@ -61,14 +62,63 @@
         </v-col>
       </v-row>
     </v-row>
+    <v-row class="my-5 mx-2">
+      <v-row id="proyectos" class="mt-5 mx-2 w-100">
+        <h4 class="d-flex mx-2">
+          <p class="text-primary">V.</p>
+          <p class="font-weight-light">Proyectos</p>
+        </h4>
+      </v-row>
+      <v-row class="my-5 mx-2 wrapper-pro">
+        <v-col cols="12" md="5">
+          <img id="img-project" src="../assets/mockup-mobile-vuefilms.png" alt="">
+        </v-col>
+        <v-col class="mt-5" cols="12" md="7">
+          <v-card elevation="0" class="text-end" color="transparent">
+            <v-card-title>{{project[0].name}}</v-card-title>
+            <div class="text-wrapper pa-5 elevation-5 rounded-lg">
+              {{project[0].description}}
+            </div>
+            <v-chip class="mt-2 me-1" size="x-small" v-for="i in project[0].techs" color="white">{{i}}
+            </v-chip>
+            <v-row class="pa-2 d-flex justify-end">
+              <v-btn elevation="0" color="transparent" icon="mdi-github" :href="project[0].urlGitHub"></v-btn>
+              <v-btn elevation="0" color="transparent" icon="mdi-palette-advanced" :href="project[0].urlFigma"></v-btn>
+              <v-btn elevation="0" color="transparent" icon="mdi-web" :href="project[0].url"></v-btn>
+            </v-row>
+          </v-card>
+        </v-col>
+      </v-row>
+      <v-row class="my-5 mx-2 wrapper-pro-2">
+        <v-col class="mt-5" cols="12" md="7">
+          <v-col class="d-flex justify-end" cols="12" md="5">
+            <img v-if="$vuetify.display.mobile" id="img-project" src="../assets/img-exquizzite-mobile.png" alt="">
+          </v-col>
+          <v-card elevation="0" class="" color="transparent">
+            <v-card-title>{{project[1].name}}</v-card-title>
+            <div class="text-wrapper pa-5 elevation-5 rounded-lg">
+              {{project[1].description}}
+            </div>
+            <v-chip class="mt-2 me-1" size="x-small" v-for="i in project[1].techs" color="white">{{i}}
+            </v-chip>
+            <v-row class="pa-2 d-flex">
+              <v-btn elevation="0" color="transparent" icon="mdi-github" :href="project[1].urlGitHub"></v-btn>
+              <v-btn elevation="0" color="transparent" icon="mdi-palette-advanced" :href="project[1].urlFigma"></v-btn>
+              <v-btn elevation="0" color="transparent" icon="mdi-web" :href="project[1].url"></v-btn>
+            </v-row>
+          </v-card>
+        </v-col>
+        <v-col class="d-flex justify-end" cols="12" md="5">
+          <img v-if="!$vuetify.display.mobile" id="img-project" src="../assets/img-exquizzite-mobile.png" alt="">
+        </v-col>
+      </v-row>
+    </v-row>
   </v-container>
 </template>
 
 <script>
-
 export default {
   name: 'HelloWorld',
-  components: [Example],
   data: () => ({
     msg: 'yeray',
     items: [
@@ -89,7 +139,25 @@ export default {
         description: 'Reboot Academy'
       }
     ],
-    tech: ['Javascript', 'Vue', 'Node.js', 'Express.js', 'Nuxt', 'WordPress']
+    tech: ['Javascript', 'Vue', 'Node.js', 'Express.js', 'Nuxt', 'WordPress'],
+    project:
+      [{
+        name: 'VueFimls',
+        description: 'VueFimls nace bajo la idea de simplificar la busqueda de peliculas, consultar información basica, trailer y lo más importante en que plataforma esta disponible. pudiendo almacenar peliculas pendientes de ver en una lista personal.',
+        techs: ['Vue', 'Node.js', 'Express.js', 'Nuxt', 'Vuetify', 'MongoDB', 'API'],
+        urlFigma: 'https://www.figma.com/file/6tKhupBMFk4wCEQHf70IZi/VueFilms',
+        urlGitHub: 'https://github.com/VueFilms/VueFilms-Front',
+        url: 'https://vuefilms.netlify.app/',
+      },
+      {
+        name: 'Exquizzite',
+        description: 'Exquizzite es una aplicación de preguntas estilo Trivial, donde podras establecer una sala de preguntas con categorias, tipos de preguntas y  numero de las mismas, para poder juagar con tus amigos.',
+        techs: ['Vite', 'Javascript Vanilla', 'Bootstrap', 'API'],
+        urlFigma: 'https://www.figma.com/file/6tKhupBMFk4wCEQHf70IZi/VueFilms',
+        urlGitHub: 'https://github.com/VueFilms/VueFilms-Front',
+        url: 'https://vuefilms.netlify.app/',
+      }]
+
   }),
 }
 </script>
@@ -103,5 +171,46 @@ export default {
 #avatar:hover {
   filter: none;
   transition: 0.3s;
+}
+
+#img-project {
+  width: 75%;
+}
+
+.wrapper-pro {
+  height: auto;
+  background-image: url('../assets/bgimgvuefilms.png');
+  transition: 0.5s;
+  background-repeat: no-repeat;
+  background-size: 75%;
+}
+
+.wrapper-pro-2 {
+  height: auto;
+  background-image: url('../assets/bgimg-exquizzite.png');
+  background-position: right top;
+  transition: 0.5s;
+  background-repeat: no-repeat;
+  background-size: 75%;
+}
+
+@media (max-width: 1200px) {
+  .wrapper-pro {
+    background-size: 100%;
+  }
+
+  .wrapper-pro-2 {
+    background-size: 100%;
+  }
+
+  #img-project {
+    width: 25%;
+  }
+}
+
+.text-wrapper {
+  background-color: #2F2F4D;
+  font-weight: 100;
+  font-size: 0.7em;
 }
 </style>
