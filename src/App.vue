@@ -13,7 +13,7 @@
         </v-col>
         <v-col v-if="!$vuetify.display.mobile">
           <v-list class="d-flex" density="compact" nav>
-            <v-list-item prepend-icon="mdi-alpha-i" title="Sobre mí" value="#"></v-list-item>
+            <v-list-item prepend-icon="mdi-alpha-i" title="Sobre mí" href="#sobre-mi"></v-list-item>
             <v-list-item prepend-icon="mdi-alpha-v" title="Proyectos" value="#"></v-list-item>
             <v-list-item prepend-icon="mdi-alpha-x" title="Contacto" value="#"></v-list-item>
           </v-list>
@@ -21,7 +21,7 @@
       </v-app-bar>
       <v-navigation-drawer color="grey-darken-2" v-model="drawer" temporary>
         <v-list density="compact" nav>
-          <v-list-item prepend-icon="mdi-alpha-i" title="Sobre mí" value="#"></v-list-item>
+          <v-list-item prepend-icon="mdi-alpha-i" title="Sobre mí" href="#sobre-mi"></v-list-item>
           <v-list-item prepend-icon="mdi-alpha-v" title="Proyectos" value="#"></v-list-item>
           <v-list-item prepend-icon="mdi-alpha-x" title="Contacto" value="#"></v-list-item>
         </v-list>
@@ -47,6 +47,10 @@ export default {
 </script>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Bitter', serif;
 }

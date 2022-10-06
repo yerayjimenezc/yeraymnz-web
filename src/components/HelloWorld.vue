@@ -22,8 +22,8 @@
       </v-col>
     </v-row>
     <v-row class="my-5 mx-2">
-      <v-row class="my-5 mx-2">
-        <h4 class="d-flex">
+      <v-row id="sobre-mi" class="mt-5 mx-2">
+        <h4 class="d-flex mx-2">
           <p class="text-primary">I.</p>
           <p class="font-weight-light">Sobre mí</p>
         </h4>
@@ -40,10 +40,23 @@
             Vuetify. Actualmente estoy aumentando mis conocimientos a traves de proyectos.
           </p>
           <p>Aquí hay algunas tecnologías con las que he estado trabajando recientemente:</p>
+          <v-col class="px-0">
+            <v-chip class="ma-1" v-for="i in tech" variant='outlined' color="primary">{{i}}</v-chip>
+          </v-col>
         </v-col>
         <v-col class="d-flex flex-column align-center" cols="12" sm="6">
-          <v-card color="primary">
-            hola
+          <v-card class="w-100">
+            <v-card-title>Educación</v-card-title>
+            <v-expansion-panels>
+              <v-expansion-panel v-for="i in items" :key="i">
+                <v-expansion-panel-title>
+                  {{i.title}}
+                </v-expansion-panel-title>
+                <v-expansion-panel-text>
+                  {{i.description}}
+                </v-expansion-panel-text>
+              </v-expansion-panel>
+            </v-expansion-panels>
           </v-card>
         </v-col>
       </v-row>
@@ -55,9 +68,28 @@
 
 export default {
   name: 'HelloWorld',
-
+  components: [Example],
   data: () => ({
-    msg: 'yeray'
+    msg: 'yeray',
+    items: [
+      {
+        title: '2020 - Grado en Ingeniería en Diseño Industrial',
+        description: 'Universidas de Las Palmas de Gran Canaria'
+      },
+      {
+        title: '2020 - Bases en HTML, CSS, Accesibilidad Web, UX, Marketing Online y CMS Wordpress',
+        description: 'Escuela de Organización Industrial'
+      },
+      {
+        title: '2020 - Programa Especialización en Programación FullStack',
+        description: 'Escuela de Organización Industrial'
+      },
+      {
+        title: '2022 - Especialización en Desarrollo web Front-End',
+        description: 'Reboot Academy'
+      }
+    ],
+    tech: ['Javascript', 'Vue', 'Node.js', 'Express.js', 'Nuxt', 'WordPress']
   }),
 }
 </script>
