@@ -48,10 +48,8 @@
               <p class="">Hola soy Yeray Jiménez, estudie una Ingenieria en Diseño Industrial, pero mi pasión es el
                 desarrollo web.
               </p>
-              <p class="pt-5">Hola soy Yeray Jiménez, estudie una ingeniería en Diseño Industrial, pero mi pasión es el
-                desarrollo web.
-
-                Mi interés en el desarrollo web comenzó en 2020 cuando decidí realizar una serie de cursos centrados en
+              <p class="pt-5">Mi interés en el desarrollo web comenzó en 2020 cuando decidí realizar una serie de cursos
+                centrados en
                 la base de la web HTML & CSS, En 2021 decidí redireccionar mi carrera profesional hacia el sector de la
                 programación y realice una especialización en FullStack (Angular) para poder entender todas las partes
                 que componen una web. Recientemente he finalizado otro curso en especialización FrontEnd estableciendo
