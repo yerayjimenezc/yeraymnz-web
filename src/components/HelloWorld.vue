@@ -153,7 +153,7 @@
                   ¡No seas un extraño! 👋
                 </p>
               </v-row>
-              <v-row class="w-100 mt-1">
+              <v-row class="w-100 mt-1 mb-5">
                 <v-btn class="font-weight-thin" elevation="0" color="transparent" prepend-icon="mdi-github"
                   href="https://github.com/yerayjimenezc">
                   @yerayjimenezc
@@ -163,7 +163,8 @@
                   Yeray Jiménez</v-btn>
               </v-row>
               <v-row class="w-100 mt-5 d-flex justify-center">
-                <p class="mt-5 font-weight-thin">Diseñado & construido por <strong>Yeray jiménez.</strong></p>
+                <p id="footer-text" class="mt-5 font-weight-thin">Diseñado & construido por <strong>Yeray
+                    jiménez.</strong></p>
               </v-row>
             </v-col>
           </v-row>
@@ -172,7 +173,7 @@
       <v-col class="pe-0 d-flex justify-end" v-if="!$vuetify.display.mobile" cols="1">
         <div class="wrapper-left d-flex flex-column align-center">
           <div class="wrapper-icons d-flex flex-column align-end pa-0">
-            <p class="vertical-text ps-5">hola@yeramnz.com</p>
+            <a href="mailto:hola@yeramnz.dev" class="vertical-text ps-5">hola@yeramnz.com</a>
           </div>
           <div class="vl"></div>
         </div>
@@ -288,6 +289,10 @@ export default {
   font-weight: bolder;
   color: white;
   cursor: pointer;
+}
+
+#footer-text {
+  font-size: 0.8rem;
 }
 
 @media (max-width: 1200px) {
