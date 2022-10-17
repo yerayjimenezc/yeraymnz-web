@@ -7,13 +7,14 @@
             <v-btn @click.stop="drawer = !drawer" icon="mdi-dots-vertical"></v-btn>
           </v-col>
           <v-spacer v-if="$vuetify.display.mobile" />
-          <v-app-bar-title class="d-flex ma-0 align-center"><a href="#"><img src="./assets/logoMNZ.svg" width="50"></a>
+          <v-app-bar-title class="d-flex ma-0 justify-center align-center"><a href="#"><img src="./assets/logoMNZ.svg"
+                width="50"></a>
           </v-app-bar-title>
           <v-spacer />
           <v-col cols="1" v-if="$vuetify.display.mobile">
           </v-col>
           <v-col v-if="!$vuetify.display.mobile">
-            <ul class="d-flex justify-end">
+            <ul class="d-flex justify-center">
               <li class="ms-3">
                 <a href="#sobre-mi">
                   <v-icon>mdi-alpha-i</v-icon>Sobre mí
