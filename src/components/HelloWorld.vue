@@ -20,7 +20,7 @@
             <p class="font-weight-thin">Hola, soy</p>
             <h1>Yeray Jiménez</h1>
             <h3>🚀Construyo cosas para web.</h3>
-            <v-btn class="mt-4 w-50" rounded="lg" variant="outlined" size="x-large" color="primary">
+            <v-btn href="#proyectos" class="mt-4 w-50" rounded="lg" variant="outlined" size="x-large" color="primary">
               Ver Proyectos!
             </v-btn>
           </v-col>
@@ -48,14 +48,15 @@
               <p class="">Hola soy Yeray Jiménez, estudie una Ingenieria en Diseño Industrial, pero mi pasión es el
                 desarrollo web.
               </p>
-              <p class="pt-5">Mi interés en el desarrollo web comenzó en 2020 cuando decidí realizar una serie de cursos
-                centrados en la base de la web HTML & CSS, En 2021 decidi redireccionar mi carrera profesional hacia el
-                sector de la programación y realize una especialización en FullStack (Angular) para poder entender todas
-                las
-                partes que componen una web. Recientemente he finalizado otro curso en especialización FrontEnd
-                estableciendo base solida de Javascript Vanilla y manejo del DOM, para posteriormente consolidar
-                conocimientos con VUE, Nuxt y Vuetify. Actualmente estoy aumentando mis conocimientos a traves de
-                proyectos.
+              <p class="pt-5">Hola soy Yeray Jiménez, estudie una ingeniería en Diseño Industrial, pero mi pasión es el
+                desarrollo web.
+
+                Mi interés en el desarrollo web comenzó en 2020 cuando decidí realizar una serie de cursos centrados en
+                la base de la web HTML & CSS, En 2021 decidí redireccionar mi carrera profesional hacia el sector de la
+                programación y realice una especialización en FullStack (Angular) para poder entender todas las partes
+                que componen una web. Recientemente he finalizado otro curso en especialización FrontEnd estableciendo
+                base sólida de Javascript Vanilla y manejo del DOM, para posteriormente consolidar conocimientos con
+                VUE, Nuxt y Vuetify. Actualmente estoy aumentando mis conocimientos a través de proyectos.
               </p>
               <p class="pt-5">Aquí hay algunas tecnologías con las que he estado trabajando recientemente:</p>
               <v-col class="px-0">
@@ -92,7 +93,7 @@
             </v-col>
             <v-col class="mt-5" cols="12" md="7">
               <v-card elevation="0" class="text-end" color="transparent">
-                <v-card-title>{{project[0].name}}</v-card-title>
+                <v-card-title><a :href="project[0].url">{{project[0].name}}</a></v-card-title>
                 <div class="text-wrapper pa-5 elevation-5 rounded-lg">
                   {{project[0].description}}
                 </div>
@@ -113,7 +114,7 @@
                 <img v-if="$vuetify.display.mobile" id="img-project" src="../assets/img-exquizzite-mobile.png" alt="">
               </v-col>
               <v-card elevation="0" class="" color="transparent">
-                <v-card-title>{{project[1].name}}</v-card-title>
+                <v-card-title><a :href="project[1].url">{{project[1].name}}</a></v-card-title>
                 <div class="text-wrapper pa-5 elevation-5 rounded-lg">
                   {{project[1].description}}
                 </div>
@@ -217,9 +218,9 @@ export default {
         name: 'Exquizzite',
         description: 'Exquizzite es una aplicación de preguntas estilo Trivial, donde podras establecer una sala de preguntas con categorias, tipos de preguntas y  numero de las mismas, para poder juagar con tus amigos.',
         techs: ['Vite', 'Javascript Vanilla', 'Bootstrap', 'API'],
-        urlFigma: 'https://www.figma.com/file/6tKhupBMFk4wCEQHf70IZi/VueFilms',
-        urlGitHub: 'https://github.com/VueFilms/VueFilms-Front',
-        url: 'https://vuefilms.netlify.app/',
+        urlFigma: 'https://www.figma.com/file/QDmk8jA5qfJDDSHm7XCMql/exquizzite',
+        urlGitHub: 'https://github.com/EXQUIZZITE/exquizzite-front',
+        url: 'https://exquizzite.netlify.app/',
       }]
 
   }),
